@@ -11,7 +11,7 @@ export const CountryView = ({flag, name, population, region, capital, code}: Pro
     <div className="country-container">
       <div className="country-container__block">
         <div className="country-container__block__flag">
-          <img src={flag} width="100%" height="100%"/>
+          <img src={flag} width="100%" height="100%" alt={`${name} country flag`}/>
         </div>
         <div className="country-container__block__description">
           <h3><a href={`/country/${code}`}>{name}</a></h3>
