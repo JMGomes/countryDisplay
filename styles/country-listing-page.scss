@@ -1,0 +1,66 @@
+.country-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-containers {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
+  input, select {
+    padding: 8px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    width: 80%;
+    @media (min-width: 800px) {
+      margin-left: 3%;
+      width: 30%;
+    }
+    @media (min-width: 1200px) {
+      margin-left: 2.5%;
+      width: 20%;
+    }
+  }
+  select {
+    margin-right: 10%;
+    margin-left: auto;
+    @media (min-width: 800px) {
+      margin-right: 4%;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 2.5%;
+    }
+  }
+}
+
+.country-container {
+  width: 100%;
+  @media (min-width: 800px) {
+    width: 33%;
+  }
+  @media (min-width: 1200px) {
+    width: 25%;
+  }
+
+  &__block {
+    margin: 5% 10%;
+    border: 1px solid black;
+
+    &__flag {
+      @media (min-width: 800px) {
+        height: 12vw;
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &__description {
+      padding: 0 20px;
+    }
+  }
+}
+

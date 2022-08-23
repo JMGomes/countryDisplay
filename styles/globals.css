@@ -1,0 +1,50 @@
+:root {
+  --darkBlue: hsl(209, 23%, 22%);
+  --veryDarkBlue: hsl(207, 26%, 17%);
+  --veryDarkBlue2: hsl(200, 15%, 8%);
+  --darkGray: hsl(0, 0%, 52%);
+  --veryDarkGray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--veryDarkBlue2);
+  background: var(--veryDarkGray);
+  /*input: darkGray,*/
+  /*elementsColor: white,*/
+}
+
+.elementsColor {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+  background: var(--white);
+}
+
+[data-theme='dark'],
+[data-theme='dark'] html,
+[data-theme='dark'] body {
+  background: var(--veryDarkBlue);
+  color: var(--white);
+}
+
+[data-theme='dark'] .elementsColor {
+  box-shadow: rgba(255, 255, 255, 0.15) 2px 5px 15px;
+  background: var(--darkBlue);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #0070f3;
+}
+
+* {
+  box-sizing: border-box;
+}

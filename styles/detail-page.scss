@@ -1,0 +1,48 @@
+.detail-page {
+  padding: 0 2rem;
+  .detail-page__flag-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .detail-page__info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+
+  img {
+    max-height: 400px;
+    max-width: 100%;
+  }
+
+  .detail-page__first-column {
+    width: 100%;
+  }
+  .detail-page__second-column {
+    width: 100%;
+  }
+
+  @media (min-width: 800px) {
+    .detail-page__flag-container {
+      width: 40%;
+    }
+    .detail-page__info {
+      width: 60%;
+
+
+    }
+    .detail-page__first-column {
+      width: 50%;
+    }
+    .detail-page__second-column {
+      width: 50%;
+    }
+
+  }
+
+  h1 {
+    width: 100%;
+  }
+}
