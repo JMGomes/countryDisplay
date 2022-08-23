@@ -33,7 +33,7 @@ const renderColumns = (country: Country): ReactNode => {
           {singleLabel('Capital', country.capital)}
         </div>
         <div className="detail-page__second-column">
-          {singleLabel('Top Level Domain', country.tld.join(', '))}
+          {singleLabel('Top Level Domain', country.tld ? country.tld.join(', ') : '')}
           {singleLabel('Currencies', buildCurrenciesString(country))}
           {singleLabel('Language', buildLanguagesString(country))}
         </div>
