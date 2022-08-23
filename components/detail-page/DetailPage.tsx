@@ -14,7 +14,8 @@ export interface Props {
 }
 
 const singleLabel = (label: string, children: ReactNode): ReactNode => {
-  return (<p>
+  return (
+      <p>
         <span style={{fontWeight: "bold"}}>{label}: </span>
         {children}
       </p>
@@ -37,7 +38,7 @@ const renderColumns = (country: Country): ReactNode => {
           {singleLabel('Language', buildLanguagesString(country))}
         </div>
       </>
-);
+  );
 }
 
 export const DetailPage = ({country, borderCountries}: Props) => {
