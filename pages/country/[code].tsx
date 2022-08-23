@@ -18,10 +18,7 @@ export async function getStaticPaths() {
   const countries: any[] = await fetchAllCountries();
   const validCodes: string[] = [];
   countries.forEach((c) => {
-    validCodes.push(c.cca2);
     validCodes.push(c.cca3);
-    validCodes.push(c.ccn3);
-    validCodes.push(c.cioc);
   });
   const paths = validCodes
   .filter((validCode) => validCode != undefined)
