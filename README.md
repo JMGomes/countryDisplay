@@ -19,6 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [x] Filter countries by region
 - [x] Click through to the border countries on the detail page
 - [x] Toggle the color scheme between light and dark mode (preference stored on local machine)
+- [x] Organize countries alphabetically (Not requested)
 
 ## Non Functional Requirement Implemented
 - [x] Add unit tests (Jest)
