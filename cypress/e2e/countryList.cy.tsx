@@ -1,3 +1,4 @@
+// @ts-ignore
 describe('country list', () => {
   it('should navigate correctly', () => {
     cy.visit('localhost:3000');
