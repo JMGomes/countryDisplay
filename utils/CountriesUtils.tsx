@@ -2,15 +2,21 @@ import {Country} from "../api/CountryResponse";
 
 
 export const buildCurrenciesString = (c: Country): string => {
-  return Object.keys(c.currencies)
-  .map(k => c.currencies[k].name)
-  .join(', ')
+  if (c && c.currencies) {
+    return Object.keys(c.currencies)
+    .map(k => c.currencies[k].name)
+    .join(', ')
+  }
+  return '';
 }
 
 export const buildLanguagesString = (c: Country): string => {
-  return Object.keys(c.languages)
-  .map(k => c.languages[k])
-  .join(', ')
+  if (c && c.languages) {
+    return Object.keys(c.languages)
+    .map(k => c.languages[k])
+    .join(', ')
+  }
+  return '';
 }
 
 export const getNativeName = (c: Country): string => {
