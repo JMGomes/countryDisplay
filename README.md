@@ -59,5 +59,5 @@ These tests are written using Cypress. To run these tests run locally execute:
 - `yarn dev`
 - `yarn run cypress`
 For practical examples see:
-- `cypress/e2e/countryList.cy.ts`
+- `cypress/e2e/countryList.cy.tsx`
 
