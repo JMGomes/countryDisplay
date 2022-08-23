@@ -30,7 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [x] Import and publish code on github public repo
 - [x] Back Button functionality
 - [] 100% correct with designs (complicate to follow and low priority due lack of time)
-
+- [] Add lint and/or prettier to project
 
 
 ## Tests
