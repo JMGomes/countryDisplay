@@ -28,8 +28,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [x] Optimize for performance
 - [x] Deployed to Vercel public web address
 - [x] Import and publish code on github public repo
-- [] 100% correct with designs (complicate to follow and low priority)
-- [] Back Button functionality
+- [x] Back Button functionality
+- [] 100% correct with designs (complicate to follow and low priority due lack of time)
+
 
 
 ## Tests

@@ -43,27 +43,30 @@ const renderColumns = (country: Country): ReactNode => {
 
 export const DetailPage = ({country, borderCountries}: Props) => {
   return (
-      <div className="detail-page" style={{display: "flex", flexWrap: 'wrap'}}>
-        <div className='detail-page__flag-container'>
-          <img src={country.flags.svg} alt={`${country.name.common} flag`}/>
-        </div>
-        <div className="detail-page__info">
-          <h1>{country.name.common}</h1>
-          {renderColumns(country)}
-          <p style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            alignContent: 'center',
-            alignItems: 'center',
-          }}>
-            <span style={{fontWeight: "bold"}}>Border Countries: </span>{
-            borderCountries.map(b =>
+      <div className="detail-page--container">
+        <button onClick={() => history.back()} className="detail-page--container__back-button">&#8592; Back</button>
+        <div className="detail-page">
+
+          <div className='detail-page__flag-container'>
+            <img src={country.flags.svg} alt={`${country.name.common} flag`}/>
+          </div>
+          <div className="detail-page__info">
+            <h1>{country.name.common}</h1>
+            {renderColumns(country)}
+            <p style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignContent: 'center',
+              alignItems: 'center',
+            }}>
+              <span style={{fontWeight: "bold"}}>Border Countries: </span>{borderCountries.map(b =>
                 <BorderCountryButton
                     key={b.border}
                     commonName={b.commonName}
                     border={b.border}/>
             )}
-          </p>
+            </p>
+          </div>
         </div>
       </div>
   );
