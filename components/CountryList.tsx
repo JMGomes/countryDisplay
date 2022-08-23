@@ -13,8 +13,8 @@ export interface Props {
 
 export const CountryList = ({countries}: Props) => {
   const [regions, setRegions] = useState<string[]>([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [regionSelected, setRegionSelected] = useState(REGIONS_ALL);
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [regionSelected, setRegionSelected] = useState<string>(REGIONS_ALL);
   const [currentCountries, setCurrentCountries] = useState<Country[]>(countries);
 
   useEffect(() => {

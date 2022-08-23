@@ -15,9 +15,9 @@ export const CountryView = ({flag, name, population, region, capital, code}: Pro
         </div>
         <div className="country-container__block__description">
           <h3><a href={`/country/${code}`}>{name}</a></h3>
-          <p><span style={{fontWeight: 'bold'}}>Population: </span>{population}</p>
-          <p><span style={{fontWeight: 'bold'}}>Region: </span>{region}</p>
-          <p><span style={{fontWeight: 'bold'}}>Capital: </span>{capital}</p>
+          <p data-testid="population"><span style={{fontWeight: 'bold'}}>Population: </span>{population}</p>
+          <p data-testid="region"><span style={{fontWeight: 'bold'}}>Region: </span>{region}</p>
+          <p data-testid="capital"><span style={{fontWeight: 'bold'}}>Capital: </span>{capital}</p>
         </div>
       </div>
     </div>;

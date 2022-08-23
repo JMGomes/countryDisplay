@@ -9,7 +9,7 @@ export interface Country {
   cca3: string;
   ccn3: string;
   cioc: string;
-  tld: any;
+  tld: string[];
   currencies: CurrencyMap;
   languages: LanguageMap;
   borders: string[];

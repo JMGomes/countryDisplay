@@ -33,7 +33,7 @@ const renderColumns = (country: Country): ReactNode => {
           {singleLabel('Capital', country.capital)}
         </div>
         <div className="detail-page__second-column">
-          {singleLabel('Top Level Domain', country.tld)}
+          {singleLabel('Top Level Domain', country.tld.join(', '))}
           {singleLabel('Currencies', buildCurrenciesString(country))}
           {singleLabel('Language', buildLanguagesString(country))}
         </div>
@@ -45,7 +45,7 @@ export const DetailPage = ({country, borderCountries}: Props) => {
   return (
       <div className="detail-page" style={{display: "flex", flexWrap: 'wrap'}}>
         <div className='detail-page__flag-container'>
-          <img src={country.flags.svg}/>
+          <img src={country.flags.svg} alt={`${country.name.common} flag`}/>
         </div>
         <div className="detail-page__info">
           <h1>{country.name.common}</h1>
