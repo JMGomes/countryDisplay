@@ -10,27 +10,51 @@ npm run dev
 yarn dev
 ```
 
-![img.png](img.png)
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Features Implemented
+- [x] Render countries from REST Countries API
+- [x] Search for country using input field
+- [x] Click on a country to see more detailed information on a separate page
+- [x] Filter countries by region
+- [x] Click through to the border countries on the detail page
+- [x] Toggle the color scheme between light and dark mode (preference stored on local machine)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Non Functional Requirement Implemented
+- [x] Add unit tests (Jest)
+- [x] Add Component behaviour tests (RTL)
+- [x] Add E2E tests (Cypress)
+- [x] Optimize for performance
+- [x] Deployed to Vercel public web address
+- [x] Import and publish code on github public repo
+- [] 100% with designs (complicate to follow and low priority)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Tests
 
-To learn more about Next.js, take a look at the following resources:
+We've setup up unit tests, components tests and e2e tests.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Unit tests & Component Tests
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+These tests can be run by executing `yarn test`
 
-## Deploy on Vercel
+#### Unit tests 
+These tests are written using jest and they test simple but important util functions like: buildRegions(), isMatchCountryAndRegion(), formatPopulation(), among other. 
+For practical examples see: 
+- `utils/CountriesUtils.spec.tsx`
+- `utils/CountriesRegionsUtils.spec.tsx`
+- `utils/isMatchCountryAndSearchTerm.spec.tsx`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Component tests
+These tests are written using React Testing Library and they test the components behaviour.
+For practical examples see:
+- `tests/components/CountryList.spec.tsx`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### e2e Tests
+
+These tests are written using Cypress. To run these tests run locally execute:
+- `yarn dev`
+- `yarn run cypress`
+For practical examples see:
+- `cypress/e2e/countryList.cy.ts`
+
