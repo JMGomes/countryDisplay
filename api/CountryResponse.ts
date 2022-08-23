@@ -35,15 +35,15 @@ interface NativeName {
   common: string;
 }
 
-type CurrencyMap = {
+export type CurrencyMap = {
   [currency: string]: Currency
 }
 
-interface Currency {
+export interface Currency {
   name: string;
   symbol: string;
 }
 
-type LanguageMap = {
+export type LanguageMap = {
   [language: string]: string
 }
